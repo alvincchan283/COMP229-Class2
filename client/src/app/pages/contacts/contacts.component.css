@@ -1,0 +1,51 @@
+mat-card.wide > h2 {
+    width: 70%;
+    margin: 1rem auto;
+    padding-bottom: 0.5rem;
+
+    font-weight: 300;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+mat-card.wide > p { text-align: center; }
+mat-card.wide > a.link { color: white !important; }
+
+/* CSS for entire form */
+form.contact-form {
+    width: 50vw;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form.contact-form > button {
+    width: 50%;
+    font-size: 1rem;
+    margin: 1rem auto 0 auto;
+}
+
+/* CSS for each input field */
+div.contact-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+div.contact-field > label {
+    min-width: 15vw;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+div.contact-field > input, textarea {
+    flex-grow: 1;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background-color: #ccc;
+    color: black;
+    border: 1px solid #999;
+}

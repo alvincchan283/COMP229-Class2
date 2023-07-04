@@ -1,0 +1,39 @@
+<!-- Page Header -->
+<h2 class="page-title">CONTACTS</h2>
+<p class="page-description">You can contact me via email: 
+    <a href="mailto:cchan283@my.centennialcollege.ca" style="color: white;">cchan283@my.centennialcollege.ca</a>
+</p>
+<p class="page-description">Additionally, you may contact me using the below contact form for services or inquiries.</p>
+
+<br />
+<mat-card class="wide">
+    <!-- Contact Form -->
+    <h2>Contact Form</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="contact-field">
+            <label for="firstname">First Name: </label>
+            <input formControlName="firstname" id="firstname" type="text">
+        </div>
+        <div class="contact-field">
+            <label for="lastname">Last Name: </label>
+            <input formControlName="lastname" id="lastname" type="text">
+        </div>
+        <div class="contact-field">
+            <label for="contact_number">Contact Number: </label>
+            <input formControlName="lastname" id="contact_number" type="tel">
+        </div>
+        <div class="contact-field">
+            <label for="email">Email: </label>
+            <input formControlName="lastname" id="email" type="email">
+        </div>
+        <div class="contact-field">
+            <label for="message">Message: </label>
+            <textarea formControlName="message" id="message" rows="10"></textarea>
+        </div>
+        <button mat-raised-button color="primary" id="submit-form" type="submit">Submit Contact Form</button>
+    </form>
+</mat-card>
+
+<ng-container>
+
+</ng-container>

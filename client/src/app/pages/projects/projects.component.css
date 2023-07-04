@@ -1,0 +1,43 @@
+section.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+div.project {
+    width: 45%;
+    padding: 1rem;
+    margin: 0 auto;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sub-title for service */
+h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Sub-title for role */
+h4 { font-size: 1.25rem; }
+
+img {
+    display: block;
+    margin: 1rem auto 1rem auto;
+    max-height: 18rem;
+    width: auto;
+    object-fit: contain;
+}
+
+a {
+    display: block;
+    margin-top: 0.5rem;
+    color: white;
+    word-wrap: break-word;
+}

@@ -1,0 +1,71 @@
+/* Filename: app.component.css
+   Student Name: Cheuk Wing Chan
+   Student ID: 301264973
+   Date: 2023 July 7 */
+
+/* CSS for navigation bar */
+div.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+div.logo-container > img {
+    margin-right: 1rem;
+    position: relative;
+    z-index: 2;
+
+    width: 3rem;
+    height: auto;
+    object-fit: contain;
+}
+
+div.logo-container > span {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+div.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: auto;
+}
+
+button {
+    margin-right: 1rem;
+}
+
+/* CSS for section content (Filled by Angular Router) */
+section.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(69,7,87,1) 40%, rgba(119,0,159,1) 100%);
+
+    padding: 2rem 2rem;
+    min-height: calc(100vh - 12rem);
+}
+
+/* CSS for footer */
+section.footer {
+    height: 4rem;
+    margin-top: 0;
+    width: 100%;
+    bottom: 0;
+
+    color: white;
+    background-color: #673ab7;
+
+    display: flex;
+    flex-direction: row;
+}
+
+section.footer > p {
+    margin: auto auto;
+    font-size: 1rem;
+    font-weight: 300;
+}

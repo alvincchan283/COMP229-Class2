@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Filename: styles.css
+   Student Name: Cheuk Wing Chan
+   Student ID: 301264973
+   Date: 2023 July 7 */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-card {
+   background: transparent !important;
+   color: white !important;
+   border-radius: 0.5rem !important;
+   box-shadow: 2px 2px 8px 2px #ccc !important;
+}
+ 
+mat-card.wide {
+   width: 80vw;
+   padding: 1rem 2rem;
+   margin: 1rem 2rem;
+}
+
+div.image-wrapper {
+   width: 100%;
+   text-align: center;
+}
+
+h2.page-title {
+   width: 70%;
+   margin: 1rem auto;
+   padding-bottom: 0.5rem;
+   color: white;
+
+   font-weight: 600;
+   font-size: 1.75rem;
+   text-align: center;
+}
+
+p.page-description {
+   width: 60%;
+   margin: 1rem auto;
+   color: white;
+   text-align: justify;
+   line-height: 1.5;
+}
