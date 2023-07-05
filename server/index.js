@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const authMiddleware = require('./middleware/auth.middleware');
 
 // Starting the express server.
 function startAppServer() {
     const app = express();
+    app.use(cors({ origin: 'http://localhost:4200' }));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cookieParser());

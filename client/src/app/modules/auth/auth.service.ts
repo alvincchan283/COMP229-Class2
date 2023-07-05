@@ -10,8 +10,17 @@ export class AuthService {
 
   constructor() { }
 
-  login(username: string, password: string): boolean {
-    this.isloggedIn = true;
+  async login(username: string, password: string): Promise<boolean> {
+    const res = await fetch('http://localhost:4000/users', { 
+      method: 'POST', 
+      mode: 'cors',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ username, password })}
+    );
+
+    this.isloggedIn = res.ok;
     return this.isloggedIn;
   }
 

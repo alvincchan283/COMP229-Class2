@@ -16,7 +16,7 @@ exports.login = async (req, res) => {
     await user.save();
 
     // Cookie is valid for an hour.
-    res.cookie('token', user.token, { httpOnly: true, expires: new Date(Date.now() + hour) });
+    res.cookie('token', user.token, { httpOnly: true, expires: new Date(Date.now() + 3600 * 1000) });
 
     return res.status(200).send({ ok: true });
 }

@@ -11,6 +11,9 @@ import { MaterialModule } from './modules/material/material.module';
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { LoginComponent } from './pages/login/login.component';
 import { BusinessContactsComponent } from './pages/business-contacts/business-contacts.component';
+import { UpdateContactsComponent } from './pages/update-contacts/update-contacts.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -21,13 +24,16 @@ import { BusinessContactsComponent } from './pages/business-contacts/business-co
     ServicesComponent,
     ProjectsComponent,
     LoginComponent,
-    BusinessContactsComponent
+    BusinessContactsComponent,
+    UpdateContactsComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule,
+    MatIconModule
   ],
   exports: [
     AppRoutingModule,
@@ -36,4 +42,4 @@ import { BusinessContactsComponent } from './pages/business-contacts/business-co
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
