@@ -1,11 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const authMiddleware = require('./middleware/auth.middleware');
 
 // Starting the express server.
 function startAppServer() {
     const app = express();
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(cookieParser());
     
     app.get('/', (req, res) => {
         res.json({ 'message': 'The server works.' });
@@ -13,7 +16,7 @@ function startAppServer() {
     
     // Defining routes for users and contacts.
     app.use('/users', require('./routes/user.routes'));
-    app.use('/contacts', require('./routes/business_contact.routes'));
+    app.use('/contacts', authMiddleware, require('./routes/business_contact.routes'));
     
     // Listening request at port 4000.
     app.listen(4000, () => {

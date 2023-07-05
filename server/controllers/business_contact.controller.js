@@ -6,15 +6,15 @@ exports.createContact = async (req, res) => {
     for (let requiredAttr of requiredAttributes) {
         if (!req.body[requiredAttr]) {
             return res.status(400).send({
-                message: `BusinessContact\'s ${requiredAttr} cannot be empty.`
+                message: `The contact\'s ${requiredAttr} cannot be empty.`
             });
         }
     }
     
     const contact = new BusinessContact({
         name: req.body.name,
-        age: req.body.age,
-        major: req.body.major
+        number: req.body.number,
+        email: req.body.email
     });
 
     try {
@@ -41,7 +41,7 @@ exports.getContactById = (req, res) => {
 
     BusinessContact.findById(contactId)
     .then(contact => {
-        if (!contact) return res.status(404).send({ message: 'The requested ontact was not found.'});
+        if (!contact) return res.status(404).send({ message: 'The requested contact was not found.'});
         res.status(200).send(contact);
     })
     .catch(err => {
@@ -88,11 +88,11 @@ exports.deleteContact = (req, res) => {
 
     BusinessContact.findByIdAndDelete(contactId)
     .then(contact => {
-        if (!contact) return res.status(404).send({ message: 'BusinessContact not found.'});
-        res.status(200).send({ message: 'The BusinessContact has been deleted.' });
+        if (!contact) return res.status(404).send({ message: 'The contact was not found.'});
+        res.status(200).send({ message: 'The contact has been deleted.' });
     })
     .catch(err => {
         console.error(err);
-        res.status(500).send({ message: 'Error occurred when deleting BusinessContact from database.' });
+        res.status(500).send({ message: 'Error occurred when deleting contact from database.' });
     });
 }
