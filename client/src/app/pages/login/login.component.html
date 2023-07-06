@@ -1,5 +1,8 @@
 <div class="container">
     <h2 class="page-title">LOGIN</h2>
+    <div class="login-notice" *ngIf="this.showLoginNotice">
+        <p>The username or password is incorrect, please try again.</p>
+    </div>
     <form [formGroup]="loginForm" action="/" method="post" class="login-form" (ngSubmit)="onSubmit()">
         <div class="login-field">
             <label for="username">Username: </label>

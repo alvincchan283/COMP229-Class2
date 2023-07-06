@@ -20,6 +20,8 @@ export class LoginComponent {
     password: ''
   });
 
+  showLoginNotice = false;
+
   onSubmit(): void {
     let { username, password } = this.loginForm.value;
     username = username ?? '';
@@ -27,9 +29,9 @@ export class LoginComponent {
     this.authService.login(username, password)
     .then(isloggedIn => {
       if (isloggedIn) {
-        this.router.navigate(['/']);
+        this.router.navigate(['/business-contacts']);
       } else {
-        console.error('Username or password is incorrect, please try again.')
+        this.showLoginNotice = true;
       }
     });
   }

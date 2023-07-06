@@ -46,3 +46,10 @@ div.login-field > input, textarea {
     color: black;
     border: 1px solid #999;
 }
+
+div.login-notice {
+    padding: 0.5rem 2rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: lightcoral;
+}
