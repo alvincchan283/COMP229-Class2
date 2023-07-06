@@ -40,4 +40,5 @@ client/typings
 Thumbs.db
 
 # Sensitive credentials
+.env
 server/config/database.config.js
