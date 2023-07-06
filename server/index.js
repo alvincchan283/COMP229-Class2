@@ -26,13 +26,13 @@ function startAppServer() {
     });
 }
 
-// The config file for MongoDB connection is not present in git repo to avoid API key leakage.
-const dbConfig = require('./config/database.config'); 
+// Load sensitive credentials from dotenv package.
+require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 // Activate the connection.
-mongoose.connect(dbConfig.url, { 
+mongoose.connect(process.env.DB_URL, { 
     useNewUrlParser: true
 }).then(() => {
     // Start the express server after connecting to the database.
