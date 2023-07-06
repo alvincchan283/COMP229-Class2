@@ -1,0 +1,23 @@
+<h2 class="page-title">Update Contact</h2>
+
+<mat-card class="wide">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="contact-field">
+            <label for="name"> Name: </label>
+            <input formControlName="name" id="name" type="text" value="{{this.contactForm.value.name}}">
+        </div>
+        <div class="contact-field">
+            <label for="number">Contact Number: </label>
+            <input formControlName="number" id="number" type="tel" value="{{this.contactForm.value.number}}">
+        </div>
+        <div class="contact-field">
+            <label for="email">Email Address: </label>
+            <input formControlName="email" id="email" type="email" value="{{this.contactForm.value.email}}">
+        </div>
+        <div class="button-row">
+            <button mat-raised-button color="primary" type="submit">Update Contact</button>
+            <button mat-raised-button color="primary" type="button" (click)="this.onCancel()">Cancel</button>
+            <button mat-raised-button color="accent" type="button" (click)="this.onDelete()">Delete</button>
+        </div>
+    </form>
+</mat-card>

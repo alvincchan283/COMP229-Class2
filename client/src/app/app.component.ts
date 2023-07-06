@@ -6,6 +6,7 @@
 import { Component, HostListener } from '@angular/core';
 import { AuthService } from './modules/auth/auth.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,10 @@ import { Subscription } from 'rxjs';
   providers: [AuthService]
 })
 export class AppComponent {
-  constructor(public authService: AuthService) {
+  constructor(
+    public authService: AuthService,
+    private router: Router
+  ) {
     this.subscription = authService.loginStatus$.subscribe(status => this.isloggedIn = status);
   }
 
@@ -48,5 +52,10 @@ export class AppComponent {
 
   toggleSidebar() {
     this.openSidebar = !this.openSidebar;
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/']);
   }
 }

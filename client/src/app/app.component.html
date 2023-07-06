@@ -23,6 +23,7 @@
             <a routerLink="/contacts"><button mat-raised-button color="primary">Find Me</button></a>
             <a *ngIf="!this.isloggedIn" routerLink="/login"><button mat-raised-button color="primary">Login</button></a>
             <a *ngIf="this.isloggedIn" routerLink="/business-contacts"><button mat-raised-button color="primary">Business Contacts</button></a>
+            <a *ngIf="this.isloggedIn"><button mat-raised-button color="primary" (click)="this.logout()">Logout</button></a>
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
@@ -38,6 +39,7 @@
             <a routerLink="/contacts"><button mat-raised-button color="primary">Find Me</button></a>
             <a *ngIf="!this.isloggedIn" routerLink="/login"><button mat-raised-button color="primary">Login</button></a>
             <a *ngIf="this.isloggedIn" routerLink="/business-contacts"><button mat-raised-button color="primary">Business Contacts</button></a>
+            <a *ngIf="this.isloggedIn"><button mat-raised-button color="primary" (click)="this.logout()">Logout</button></a>
         </div>
     </mat-sidenav>
     <mat-sidenav-content>

@@ -6,10 +6,10 @@ import { BehaviorSubject, } from 'rxjs';
 })
 export class AuthService {
 
-  private isloggedIn = new BehaviorSubject<boolean>(false);
+  private isloggedIn = new BehaviorSubject<boolean>(localStorage.getItem('token') !== null);
   loginStatus$ = this.isloggedIn.asObservable();
 
-  constructor() { }
+  constructor() {}
 
   async login(username: string, password: string): Promise<boolean> {
     const res = await fetch('http://localhost:4000/users', { 
@@ -29,6 +29,7 @@ export class AuthService {
   }
 
   logout(): void {
+    localStorage.removeItem('token');
     this.isloggedIn.next(false);
   }
 

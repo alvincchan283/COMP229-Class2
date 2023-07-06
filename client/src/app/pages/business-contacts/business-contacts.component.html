@@ -16,8 +16,8 @@
             <td>{{contact.number}}</td>
             <td>{{contact.email}}</td>
             <td>
-                <a routerLink="/business-contacts/update/{{contact._id}}"><button mat-raised-button color="primary">Update</button></a>
-                <a><button mat-raised-button color="primary">Delete</button></a>
+                <a routerLink="/business-contacts/{{contact._id}}"><button mat-raised-button color="primary">Update</button></a>
+                <a><button mat-raised-button color="primary" (click)="this.onClickDelete(contact)">Delete</button></a>
             </td>
         </tr>
     </tbody>
