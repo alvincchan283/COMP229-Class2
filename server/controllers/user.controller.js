@@ -1,4 +1,5 @@
 const { User, UserSchema } = require('../models/user.model');
+const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 
 exports.login = async (req, res) => {
@@ -12,23 +13,14 @@ exports.login = async (req, res) => {
         return res.status(401).send({ message: 'Username or password is invalid.'});
     }
 
-    user.token = crypto.randomBytes(48).toString('hex');
-    await user.save();
+    const token = jwt.sign({ user: user._id }, 'jwtsecret');
 
     // Cookie is valid for an hour.
-    res.cookie('token', user.token, { httpOnly: true, expires: new Date(Date.now() + 3600 * 1000) });
+    res.cookie('token', token, { 
+        httpOnly: true, 
+        expires: new Date(Date.now() + 3600 * 1000),
+        sameSite: 'none'
+    });
 
-    return res.status(200).send({ ok: true });
-}
-
-exports.logout = async (req, res) => {
-    if (!req.cookies?.token) return res.status(401).send();
-
-    const user = await User.findOne({ token: req.cookies.token }).exec();
-    if (!user) return res.status(401).send({ message: 'You are already logged out.'});
-
-    user.token = null;
-    await user.save();
-    res.clearCookie('token');
-    return res.status(200).send({ ok: true });
+    return res.status(200).send({ ok: true, token });
 }

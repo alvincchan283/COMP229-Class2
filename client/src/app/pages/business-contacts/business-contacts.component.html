@@ -1,4 +1,5 @@
-<h2>Business Contacts</h2>
+<!-- Header -->
+<h2 class="page-title">Business Contacts</h2>
 
 <table class="contacts">
     <thead>
@@ -10,8 +11,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            
+        <tr *ngFor="let contact of contacts">
+            <td>{{contact.name}}</td>
+            <td>{{contact.number}}</td>
+            <td>{{contact.email}}</td>
+            <td>
+                <a routerLink="/business-contacts/update/{{contact._id}}"><button mat-raised-button color="primary">Update</button></a>
+                <a><button mat-raised-button color="primary">Delete</button></a>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -7,7 +7,7 @@ const authMiddleware = require('./middleware/auth.middleware');
 // Starting the express server.
 function startAppServer() {
     const app = express();
-    app.use(cors({ origin: 'http://localhost:4200' }));
+    app.use(cors({ origin: 'http://localhost:4200', credentials: true }));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cookieParser());

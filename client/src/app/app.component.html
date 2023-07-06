@@ -8,31 +8,45 @@
 <!-- Navigation bar -->
 <mat-toolbar color="primary" class="mat-elevation-z5">
     <mat-toolbar-row>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <button *ngIf="!this.showNavBarButton" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="this.toggleSidebar()">
             <mat-icon>menu</mat-icon>
         </button>
         <div class="logo-container">
             <img src="./assets/img/logo.svg" class="logo" alt="Logo">
-            <span class="logo-text">CWC Software Engineering</span>
+            <span class="logo-text">CWC</span>
         </div>
-        <div class="button-container">
+        <div *ngIf="this.showNavBarButton" class="button-container">
             <a routerLink="/"><button mat-raised-button color="primary">Home</button></a>
             <a routerLink="/aboutme"><button mat-raised-button color="primary">About Me</button></a>
             <a routerLink="/projects"><button mat-raised-button color="primary">Projects</button></a>
             <a routerLink="/services"><button mat-raised-button color="primary">Services</button></a>
-            <a routerLink="/contacts"><button mat-raised-button color="primary">Contact Me</button></a>
-            <a *ngIf="!this.authService.getLoginStatus()" routerLink="/login"><button mat-raised-button color="primary">Login</button></a>
-            <a *ngIf="this.authService.getLoginStatus()" routerLink="/login"><button mat-raised-button color="primary">Business Contacts</button></a>
-            <a *ngIf="this.authService.getLoginStatus()" routerLink="/login"><button mat-raised-button color="primary">Logout</button></a>
+            <a routerLink="/contacts"><button mat-raised-button color="primary">Find Me</button></a>
+            <a *ngIf="!this.isloggedIn" routerLink="/login"><button mat-raised-button color="primary">Login</button></a>
+            <a *ngIf="this.isloggedIn" routerLink="/business-contacts"><button mat-raised-button color="primary">Business Contacts</button></a>
         </div>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <!-- Container for page content -->
-<section class="content">
-    <router-outlet (activate)="onSwitchRoute()"></router-outlet>
-</section>
-
-<section class="footer">
-    <p color="primary">Copyright &copy; 2023: Cheuk Wing Chan, Student ID: 301264973</p>
-</section>
+<mat-sidenav-container>
+    <mat-sidenav mode="over" opened *ngIf="!this.showNavBarButton && this.openSidebar">
+        <div class="button-column">
+            <a routerLink="/"><button mat-raised-button color="primary">Home</button></a>
+            <a routerLink="/aboutme"><button mat-raised-button color="primary">About Me</button></a>
+            <a routerLink="/projects"><button mat-raised-button color="primary">Projects</button></a>
+            <a routerLink="/services"><button mat-raised-button color="primary">Services</button></a>
+            <a routerLink="/contacts"><button mat-raised-button color="primary">Find Me</button></a>
+            <a *ngIf="!this.isloggedIn" routerLink="/login"><button mat-raised-button color="primary">Login</button></a>
+            <a *ngIf="this.isloggedIn" routerLink="/business-contacts"><button mat-raised-button color="primary">Business Contacts</button></a>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <section class="content">
+            <router-outlet (activate)="onSwitchRoute()"></router-outlet>
+        </section>
+        
+        <section class="footer">
+            <p color="primary">Copyright &copy; 2023: Cheuk Wing Chan, Student ID: 301264973</p>
+        </section>
+    </mat-sidenav-content>
+</mat-sidenav-container>

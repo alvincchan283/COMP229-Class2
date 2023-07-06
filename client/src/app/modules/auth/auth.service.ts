@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private isloggedIn = false;
-  private token = null;
+  private isloggedIn = new BehaviorSubject<boolean>(false);
+  loginStatus$ = this.isloggedIn.asObservable();
 
   constructor() { }
 
@@ -20,15 +21,18 @@ export class AuthService {
       body: JSON.stringify({ username, password })}
     );
 
-    this.isloggedIn = res.ok;
-    return this.isloggedIn;
+    const data = await res.json();
+
+    this.isloggedIn.next(res.ok);
+    localStorage.setItem('token', data.token);
+    return res.ok;
   }
 
   logout(): void {
-    this.isloggedIn = false;
+    this.isloggedIn.next(false);
   }
 
   getLoginStatus(): boolean {
-    return this.isloggedIn;
+    return this.isloggedIn.value;
   }
 }

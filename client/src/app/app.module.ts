@@ -13,8 +13,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { BusinessContactsComponent } from './pages/business-contacts/business-contacts.component';
 import { UpdateContactsComponent } from './pages/update-contacts/update-contacts.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    MatIconModule
+    HttpClientModule
   ],
   exports: [
     AppRoutingModule,

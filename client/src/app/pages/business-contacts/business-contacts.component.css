@@ -1,0 +1,18 @@
+table.contacts {
+    min-width: 60vw;
+    color: white;
+}
+
+table.contacts tr th {
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+table.contacts tr td {
+    padding: 1rem;
+}
+
+table.contacts tr td a {
+    margin-left: 1rem;
+}
+

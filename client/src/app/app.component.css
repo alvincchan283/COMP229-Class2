@@ -33,8 +33,24 @@ div.button-container {
     margin-left: auto;
 }
 
-button {
-    margin-right: 1rem;
+div.button-column {
+    width: 13rem;
+    height: inherit;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: #673ab7;
+}
+
+div.button-container a {
+    margin-right: 0.5rem;
+}
+
+div.button-column a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1rem;
 }
 
 /* CSS for section content (Filled by Angular Router) */

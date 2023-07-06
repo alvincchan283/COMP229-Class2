@@ -29,7 +29,8 @@ div.login-field {
 }
 
 div.login-field > label {
-    min-width: 10vw;
+    min-width: 15vw;
+    margin-right: 1rem;
     font-weight: 400;
     font-size: 1rem;
     color: white;
