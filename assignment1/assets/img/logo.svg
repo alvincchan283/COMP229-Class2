@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" xml:space="preserve" color-interpolation-filters="sRGB" class="st4" viewBox="325.86 184.13 180.36 180.37">
+	<v:documentProperties v:langID="1033" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#502271;stroke:#ffffff;stroke-width:0.25}
+		.st2 {fill:#ffffff;font-family:Sitka Text Semibold;font-size:3em}
+		.st3 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:0.75}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Page-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394" v:shadowOffsetY="-8.50394"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(325.984,-230.909)">
+			<title>24-Point Star</title>
+			<desc>CWC</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CtrlYOffset" v:prompt="" v:val="VT0(0.47244094488189):24"/>
+				<v:ud v:nameU="CtrlXOffset" v:prompt="" v:val="VT0(0.06219803035625):24"/>
+				<v:ud v:nameU="CtrlAngle" v:prompt="" v:val="VT0(0.13089969389958):26"/>
+				<v:ud v:nameU="ElbowDist" v:prompt="" v:val="VT0(0.47651761917173):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="CtrlYOffset" v:prompt="" v:val="VT0(1.0006365816224):1"/>
+				<v:ud v:nameU="CtrlXOffset" v:prompt="" v:val="VT0(0.1317363051479):1"/>
+				<v:ud v:nameU="ElbowDist" v:prompt="" v:val="VT0(1.0092710352403):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="90.0573" cy="505.218" width="180.12" height="180.115"/>
+			<path d="M90.06 415.16 L99.54 433.17 L113.37 418.23 L117.87 438.08 L135.09 427.23 L134.29 447.57 L153.74 441.54 L147.71        460.98 L168.05 460.19 L157.19 477.41 L177.05 481.91 L162.1 495.73 L180.11 505.22 L162.1 514.7 L177.05 528.53        L157.19 533.03 L168.05 550.25 L147.71 549.46 L153.74 568.9 L134.29 562.87 L135.09 583.21 L117.87 572.35        L113.37 592.21 L99.54 577.26 L90.06 595.28 L80.57 577.26 L66.75 592.21 L62.25 572.35 L45.03 583.21 L45.82        562.87 L26.38 568.9 L32.41 549.46 L12.07 550.25 L22.92 533.03 L3.07 528.53 L18.01 514.7 L0 505.22 L18.01        495.73 L3.07 481.91 L22.92 477.41 L12.07 460.19 L32.41 460.98 L26.38 441.54 L45.82 447.57 L45.03 427.23        L62.25 438.08 L66.75 418.23 L80.57 433.17 L90.06 415.16 Z" class="st1"/>
+			<text x="49.35" y="559.22" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/><v:newlineChar/><v:newlineChar/>CWC</text>		</g>
+		<g id="shape3-4" v:mID="3" v:groupContext="shape" transform="translate(387.692,-308.268)">
+			<title>Network</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Icon)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M12.15 541.46 L12.15 563.39 L44.55 563.39 L44.55 541.46 L12.15 541.46 ZM10.13 565.38 L10.13 539.47 L46.58 539.47        L46.58 565.38 L10.13 565.38 ZM52.65 589.3 L52.65 585.31 L38.48 585.31 L38.48 589.3 L52.65 589.3 ZM34.43        591.29 L34.43 583.32 L22.28 583.32 L22.28 591.29 L34.43 591.29 ZM30.38 573.35 L26.33 573.35 L26.33 579.33        L30.38 579.33 L30.38 573.35 ZM6.08 569.37 L50.63 569.37 L50.63 535.48 L6.08 535.48 L6.08 569.37 ZM18.23        589.3 L18.23 585.31 L4.05 585.31 L4.05 589.3 L18.23 589.3 ZM54.33 581.32 C55.64 581.32 56.7 582.36 56.7        583.65 L56.7 590.95 C56.7 592.24 55.64 593.28 54.33 593.28 L38.41 593.28 C38.24 594.4 37.29 595.28 36.11        595.28 L20.59 595.28 C19.41 595.28 18.46 594.4 18.29 593.28 L2.37 593.28 C1.06 593.28 0 592.24 0 590.95        L0 583.65 C0 582.36 1.06 581.32 2.37 581.32 L18.29 581.32 C18.47 580.2 19.41 579.33 20.59 579.33 L22.28        579.33 L22.28 573.35 L4.39 573.35 C3.08 573.35 2.03 572.31 2.03 571.02 L2.03 533.82 C2.03 532.54 3.08 531.5        4.39 531.5 L52.31 531.5 C53.62 531.5 54.68 532.54 54.68 533.82 L54.68 571.02 C54.68 572.31 53.62 573.35        52.31 573.35 L34.43 573.35 L34.43 579.33 L36.11 579.33 C37.29 579.33 38.24 580.2 38.41 581.32 L54.33 581.32        Z" class="st3"/>
+		</g>
+	</g>
+</svg>
