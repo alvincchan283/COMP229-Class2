@@ -7,7 +7,7 @@ const authMiddleware = require('./middleware/auth.middleware');
 // Starting the express server.
 function startAppServer() {
     const app = express();
-    app.use(cors({ origin: 'http://localhost:4200', credentials: true }));
+    app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cookieParser());
@@ -21,7 +21,7 @@ function startAppServer() {
     app.use('/contacts', authMiddleware, require('./routes/business_contact.routes'));
     
     // Listening request at port 4000.
-    app.listen(4000, () => {
+    app.listen(process.env.SERVER_PORT, () => {
         console.log('The backend system of portfolio site is now ready.');
     });
 }

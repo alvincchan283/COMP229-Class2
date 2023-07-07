@@ -8,7 +8,7 @@ module.exports = function(req, res, next) {
     // Extract bearer token in authorization header.
     if (token.indexOf('Bearer ') !== -1) token = token.split(' ')[1];
 
-    let userId = jwt.verify(token, 'jwtsecret')?.user;
+    let userId = jwt.verify(token, process.env.JWT_SECRET)?.user;
     if (!userId) return res.status(401).send({ message: 'Token expired or invalid.' });
 
     User.findById(userId)

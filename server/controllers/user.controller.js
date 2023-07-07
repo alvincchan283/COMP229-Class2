@@ -13,7 +13,7 @@ exports.login = async (req, res) => {
         return res.status(401).send({ message: 'Username or password is invalid.'});
     }
 
-    const token = jwt.sign({ user: user._id }, 'jwtsecret');
+    const token = jwt.sign({ user: user._id }, process.env.JWT_SECRET);
 
     // Cookie is valid for an hour.
     res.cookie('token', token, { 
