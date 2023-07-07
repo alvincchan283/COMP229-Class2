@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class AuthService {
   constructor() {}
 
   async login(username: string, password: string): Promise<boolean> {
-    const res = await fetch('http://localhost:4000/users', { 
+    const res = await fetch(`${environment.backend_url}/users`, { 
       method: 'POST', 
       mode: 'cors',
       headers: {

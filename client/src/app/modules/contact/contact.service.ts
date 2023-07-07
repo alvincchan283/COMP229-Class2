@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError, Subject } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 export interface ContactDTO {
   name: string,
@@ -35,28 +36,28 @@ export class ContactService {
   }
 
   fetchOneContact(contactId: string) {
-    return this.http.get<Contact>('http://localhost:4000/contacts/' + contactId, { 
+    return this.http.get<Contact>(`${environment.backend_url}/contacts/${contactId}`, { 
       headers: this.getHeader(),
       withCredentials: true
     });
   }
 
   fetchAllContacts() {
-    return this.http.get<Contact[]>('http://localhost:4000/contacts', { 
+    return this.http.get<Contact[]>(`${environment.backend_url}/contacts/`, { 
       headers: this.getHeader(),
       withCredentials: true
     });
   }
 
   updateContact(contactId: string, data: ContactDTO) {
-    return this.http.put<Contact>('http://localhost:4000/contacts/' + contactId, data, { 
+    return this.http.put<Contact>(`${environment.backend_url}/contacts/${contactId}`, data, { 
       headers: this.getHeader(),
       withCredentials: true
     });
   }
 
   deleleContact(contactId: string) {
-    return this.http.delete<Response>('http://localhost:4000/contacts/' + contactId, { 
+    return this.http.delete<Response>(`${environment.backend_url}/contacts/${contactId}`, { 
       headers: this.getHeader(),
       withCredentials: true
     });
